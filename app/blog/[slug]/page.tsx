@@ -5,9 +5,9 @@ import type { Metadata } from "next";
 import { getPostData, getSortedPostsData } from "@/lib/blog";
 
 interface BlogDetailPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -18,7 +18,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: BlogDetailPageProps): Promise<Metadata> {
-  const post = await getPostData(params.slug);
+  const { slug } = await params;
+  const post = await getPostData(slug);
 
   if (!post) {
     return { title: "文章未找到" };
@@ -31,7 +32,8 @@ export async function generateMetadata({
 }
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
-  const post = await getPostData(params.slug);
+  const { slug } = await params;
+  const post = await getPostData(slug);
 
   if (!post) {
     notFound();
