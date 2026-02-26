@@ -3,14 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Camera, Package, PenTool, Music, Menu, X } from "lucide-react";
+import { Camera, Package, Menu, X } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "首页", icon: null },
   { href: "/photography", label: "摄影", icon: Camera },
   { href: "/resources", label: "资源", icon: Package },
-  { href: "/blog", label: "博客", icon: PenTool },
-  { href: "/music", label: "音乐", icon: Music },
 ];
 
 export function Navigation() {

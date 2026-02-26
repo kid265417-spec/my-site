@@ -10,7 +10,6 @@
 - **AI知识分享** - 深度学习、大语言模型、计算机视觉等AI领域知识文章
 - **资源分享中心** - 精选工具、软件、网站推荐（开发工具、设计资源、AI工具等）
 - **个人博客** - 技术思考、摄影感悟、生活记录
-- **音乐分享** - 精选歌单与音乐推荐
 
 ## 技术栈
 
@@ -65,7 +64,7 @@ my-site/
 │   ├── ai-knowledge/      # AI知识分享页面
 │   ├── resources/         # 资源分享页面
 │   ├── blog/              # 博客页面
-│   └── music/             # 音乐分享页面
+│   └── upload-pdf/        # PDF 上传页面
 ├── components/            # 可复用组件
 │   ├── glass-card.tsx     # 毛玻璃卡片组件
 │   ├── navigation.tsx     # 导航组件
@@ -113,10 +112,6 @@ export const photos: Photo[] = [
 ### 修改博客文章
 
 编辑 `lib/data.ts` 中的 `blogPosts` 数组
-
-### 修改音乐推荐
-
-编辑 `lib/data.ts` 中的 `musicList` 数组
 
 ## 部署
 

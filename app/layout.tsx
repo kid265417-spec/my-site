@@ -4,9 +4,9 @@ import { Navigation } from "@/components/navigation";
 import { GradientBackground } from "@/components/gradient-background";
 
 export const metadata: Metadata = {
-  title: "光影与代码 | 个人作品集",
+  title: "Kidd",
   description: "摄影师 × 资源分享者 - 一个融合摄影美学与创作思考的数字策展空间",
-  keywords: ["摄影", "插件", "博客", "资源分享", "音乐"],
+  keywords: ["摄影", "插件", "资源分享"],
 };
 
 export default function RootLayout({

@@ -18,27 +18,6 @@ export interface Resource {
   tags: string[];
 }
 
-export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content?: string;
-  date: string;
-  category: string;
-  tags: string[];
-  readTime: string;
-}
-
-export interface Music {
-  id: string;
-  title: string;
-  artist: string;
-  album: string;
-  cover: string;
-  description: string;
-  tags: string[];
-}
-
 export const photoCategories = ["全部", "风景", "人像", "街拍", "建筑", "黑白"];
 
 export const photos: Photo[] = [
@@ -265,64 +244,3 @@ export const resources: Resource[] = [
   },
 ];
 
-export const blogCategories = ["全部", "技术", "摄影", "思考", "生活", "AI"];
-
-export const blogPosts: BlogPost[] = [
-  {
-    id: "1",
-    title: "构建现代个人网站的思考",
-    excerpt: "在信息过载的时代，个人网站作为数字身份的核心载体...",
-    date: "2024-12-15",
-    category: "技术",
-    tags: ["Web开发", "Next.js", "个人品牌"],
-    readTime: "8分钟",
-  },
-  {
-    id: "2",
-    title: "胶片摄影的温度",
-    excerpt: "在数码时代，为什么还有这么多人迷恋胶片摄影...",
-    date: "2024-12-08",
-    category: "摄影",
-    tags: ["胶片", "摄影艺术", "胶片摄影"],
-    readTime: "6分钟",
-  },
-  {
-    id: "3",
-    title: "AI时代的创作边界",
-    excerpt: "当AI能够生成图像、文字、音乐，人类的创造力将何去何从...",
-    date: "2024-12-01",
-    category: "思考",
-    tags: ["AI", "创作", "未来"],
-    readTime: "10分钟",
-  },
-  {
-    id: "4",
-    title: "2024年终回顾",
-    excerpt: "这一年的成长、收获与思考...",
-    date: "2024-11-28",
-    category: "生活",
-    tags: ["年度总结", "成长"],
-    readTime: "5分钟",
-  },
-];
-
-export const musicList: Music[] = [
-  {
-    id: "6",
-    title: "Head in the Clouds",
-    artist: "Hayd",
-    album: "Head in the Clouds",
-    cover: "/images/music/head-in-the-clouds.jpg",
-    description: "温柔而治愈的独立流行旋律，适合独处和夜晚聆听。",
-    tags: ["独立流行", "治愈", "轻音乐"],
-  },
-  {
-    id: "8",
-    title: "Love Story",
-    artist: "Taylor Swift",
-    album: "Fearless",
-    cover: "/images/music/head-in-the-clouds.jpg",
-    description: "经典流行乡村风格单曲，旋律明快、故事感十足。",
-    tags: ["流行", "乡村流行", "英文"],
-  },
-];

@@ -7,8 +7,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   Camera,
   Package,
-  PenTool,
-  Music,
   ArrowRight,
 } from "lucide-react";
 import { GlassCard } from "@/components/glass-card";
@@ -50,41 +48,6 @@ const features = [
     title: "资源分享",
     description: "精选工具、插件、软件与网站",
     delay: 0.2,
-  },
-  {
-    href: "/blog",
-    icon: PenTool,
-    title: "思考随笔",
-    description: "技术思考与生活感悟",
-    delay: 0.3,
-  },
-  {
-    href: "/music",
-    icon: Music,
-    title: "音乐分享",
-    description: "旋律中的情感与故事",
-    delay: 0.4,
-  },
-];
-
-const recentPosts = [
-  {
-    category: "知识",
-    title: "深度学习中的注意力机制解析",
-    date: "2024-12-15",
-    preview: "注意力机制是近年来深度学习领域最重要的创新之一...",
-  },
-  {
-    category: "摄影",
-    title: "城市夜景摄影技巧分享",
-    date: "2024-12-10",
-    preview: "夜景摄影需要掌握长曝光、ISO控制和构图技巧...",
-  },
-  {
-    category: "资源",
-    title: "2024年度开发者工具推荐",
-    date: "2024-12-05",
-    preview: "精选今年最实用的开发工具和资源...",
   },
 ];
 
@@ -171,7 +134,7 @@ export default function HomePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6"
         >
           {features.map((feature) => (
             <Link key={feature.href} href={feature.href}>
@@ -193,38 +156,6 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* Recent Updates */}
-      <section className="py-16">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
-        >
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl md:text-3xl font-semibold text-gradient">最新动态</h2>
-            <Link href="/blog" className="text-white/60 hover:text-white flex items-center space-x-1 transition-colors">
-              <span>查看全部</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {recentPosts.map((post, index) => (
-              <GlassCard key={index} delay={1.2 + index * 0.1}>
-                <div className="flex flex-col h-full">
-                  <span className="inline-block px-3 py-1 rounded-full bg-white/15 border border-white/20 text-xs text-white/80 mb-3 w-fit">
-                    {post.category}
-                  </span>
-                  <h3 className="text-lg font-semibold text-white mb-2">{post.title}</h3>
-                  <p className="text-white/60 text-sm mb-4 flex-grow">{post.preview}</p>
-                  <span className="text-white/30 text-xs">{post.date}</span>
-                </div>
-              </GlassCard>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-
       {/* Footer */}
       <footer className="py-12 border-t border-white/10">
         <div className="flex flex-col md:flex-row items-center justify-between">
@@ -234,12 +165,6 @@ export default function HomePage() {
             </Link>
             <Link href="/resources" className="text-white/40 hover:text-white text-sm transition-colors">
               资源
-            </Link>
-            <Link href="/blog" className="text-white/40 hover:text-white text-sm transition-colors">
-              博客
-            </Link>
-            <Link href="/music" className="text-white/40 hover:text-white text-sm transition-colors">
-              音乐
             </Link>
             <a
               href="mailto:kidd265417@gmail.com"
